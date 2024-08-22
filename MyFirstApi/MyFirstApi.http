@@ -1,0 +1,34 @@
+@MyFirstApi_HostAddress = http://localhost:5112
+
+GET {{MyFirstApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+GET {{MyFirstApi_HostAddress}}/api/posts
+Accept: application/json
+###
+GET {{MyFirstApi_HostAddress}}/api/posts/1
+Accept: application/json
+###
+POST {{MyFirstApi_HostAddress}}/api/posts
+Content-Type: application/json
+
+{  
+  "userId": 1,
+  "id": 1,
+  "title": "Hello ASP.NET Core",
+  "body": "ASP.NET Core is a cross-platform, high-performance, open-source framework for building modern, cloud-enabled, Internet-connected apps."
+}
+###
+PUT {{MyFirstApi_HostAddress}}/api/posts/1
+Content-Type: application/json
+
+{  
+  "UserId": 4,
+  "Id": 1,
+  "title": "Hello ASP.NET Core!",
+  "body": "ASP.NET Core is a cross-platform, high-performance, open-source framework for building modern, cloud-enabled, Internet-connected apps."
+}
+###
+DELETE {{MyFirstApi_HostAddress}}/api/posts/1
+Accept: application/json

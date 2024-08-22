@@ -1,0 +1,40 @@
+@ConfigurationDemo_HostAddress = http://localhost:5161 
+
+GET {{ConfigurationDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+GET {{ConfigurationDemo_HostAddress}}/api/routingexampLe/100?teste=asd
+Accept: application/json
+
+###
+GET {{ConfigurationDemo_HostAddress}}/api/configuration/my-key
+Accept: application/json
+
+###
+GET {{ConfigurationDemo_HostAddress}}/api/configuration/database-configuration
+Accept: application/json
+
+###
+GET {{ConfigurationDemo_HostAddress}}/api/configuration/database-configuration-with-bind-1
+Accept: application/json
+
+###
+GET {{ConfigurationDemo_HostAddress}}/api/configuration/database-configuration-with-bind-2
+Accept: application/json
+
+###
+GET {{ConfigurationDemo_HostAddress}}/api/configuration/database-configuration-with-generic-type
+Accept: application/json
+###
+GET {{ConfigurationDemo_HostAddress}}/api/configuration/database-configuration-with-ioptions
+Accept: application/json
+###
+GET {{ConfigurationDemo_HostAddress}}/api/configuration/database-configuration-with-ioptions-snapshot
+Accept: application/json
+###
+GET {{ConfigurationDemo_HostAddress}}/api/configuration/database-configuration-with-ioptions-monitor
+Accept: application/json
+###
+GET {{ConfigurationDemo_HostAddress}}/api/configuration/database-configuration-with-named-options
+Accept: application/json
