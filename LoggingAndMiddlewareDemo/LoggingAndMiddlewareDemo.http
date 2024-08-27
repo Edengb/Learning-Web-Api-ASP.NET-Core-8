@@ -1,0 +1,12 @@
+@LoggingAndMiddlewareDemo_HostAddress = http://localhost:5029
+
+GET {{LoggingAndMiddlewareDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+GET {{LoggingAndMiddlewareDemo_HostAddress}}/api/testingMiddleware
+Accept: application/json
+
+###
+GET {{LoggingAndMiddlewareDemo_HostAddress}}/api/testingMiddleware/especial-middleware?teste=teste
+Accept: application/json
