@@ -14,12 +14,12 @@ public class Invoice
 
     [Column(name: "InvoiceNumber", TypeName = "varchar(32)")]
     [Required]
-    public string InvoiceNumber { get; set; }
+    public string InvoiceNumber { get; set; } = string.Empty;
 
     [Column(name: "ContactName")]
     [Required]
     [MaxLength(32)]
-    public string ContactName { get; set; }
+    public string ContactName { get; set; } = string.Empty;
 
     [Column(name: "Description")]
     public string? Description { get; set; }
@@ -40,4 +40,6 @@ public class Invoice
 
     [Column(name: "Status", TypeName = "varchar(16)")]
     public InvoiceStatus Status { get; set; }
+
+    public List<InvoiceItem> InvoiceItems { get; set; } = new();
 }

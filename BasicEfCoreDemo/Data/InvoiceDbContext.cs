@@ -4,9 +4,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BasicEfCoreDemo.Data;
 
-public class InvoiceDbContext(DbContextOptions<InvoiceDbContext> options) : DbContext(options)
+public class InvoiceDbContext(DbContextOptions<InvoiceDbContext> options, IConfiguration configuration) : DbContext(options)
 {
     public DbSet<Invoice> Invoices => Set<Invoice>();
+
+    public DbSet<InvoiceItem> InvoiceItems => Set<InvoiceItem>();
+
+    // One-to-One
+    public DbSet<Contact> Contact => Set<Contact>();
+    public DbSet<Address> Addresse => Set<Address>();
+
+    // Many-to-Many
+    public DbSet<Movie> Movie => Set<Movie>();
+    public DbSet<Actor> Actor => Set<Actor>();
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder )
     {
@@ -69,9 +80,27 @@ public class InvoiceDbContext(DbContextOptions<InvoiceDbContext> options) : DbCo
         // Use IEntityTypeConfiguration<TEntity> interface
         // modelBuilder.ApplyConfiguration(new InvoiceConfiguration());
         //OR
-        new InvoiceConfiguration().Configure(modelBuilder.Entity<Invoice>());
+        // new InvoiceConfiguration().Configure(modelBuilder.Entity<Invoice>());
 
+        // new InvoiceItemConfiguration().Configure(modelBuilder.Entity<InvoiceItem>());
+        
+        // new ContactConfiguration().Configure(modelBuilder.Entity<Contact>());
+
+        // new AddressConfiguration().Configure(modelBuilder.Entity<Address>());
+
+        // new ActorConfiguration().Configure(modelBuilder.Entity<Actor>());
+
+        // new MovieConfiguration().Configure(modelBuilder.Entity<Movie>());
         // Grouping the configurations       
-        //modelBuilder.ApplyConfigurationsFromAssembly(typeof(InvoiceDbContext).Assembly);
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(InvoiceDbContext).Assembly);
     }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        base.OnConfiguring(optionsBuilder);
+        optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), b => b.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery));
+    }
+
+
 }

@@ -4,6 +4,7 @@ using BasicEfCoreDemo.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BasicEfCoreDemo.Migrations
 {
     [DbContext(typeof(InvoiceDbContext))]
-    partial class InvoiceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240905152545_AddMovieAndActor")]
+    partial class AddMovieAndActor
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -161,7 +164,7 @@ namespace BasicEfCoreDemo.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f7a786bd-1e91-4a6d-bea7-de28adba46e5"),
+                            Id = new Guid("ec88a186-02de-4fab-82c8-3b81688fbb2b"),
                             Amount = 100m,
                             ContactName = "Iron Man",
                             Description = "Invoice for the first month",
@@ -172,7 +175,7 @@ namespace BasicEfCoreDemo.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fc249dcf-0115-4b0d-b20a-ddea63bdfd49"),
+                            Id = new Guid("85c440c8-904d-4f36-9ceb-f19365cf13cc"),
                             Amount = 200m,
                             ContactName = "Captain America",
                             Description = "Invoice for the first month",
@@ -183,7 +186,7 @@ namespace BasicEfCoreDemo.Migrations
                         },
                         new
                         {
-                            Id = new Guid("631aefe0-01b8-41f7-bb96-d09706c5675a"),
+                            Id = new Guid("150a9e5b-d059-4b24-8942-3e913372a241"),
                             Amount = 300m,
                             ContactName = "Thor",
                             Description = "Invoice for the first month",

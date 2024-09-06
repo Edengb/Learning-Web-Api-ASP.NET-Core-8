@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicEfCoreDemo", "BasicEfCoreDemo.csproj", "{70773CF9-E6CC-4BAD-8DA3-F84AFF5443BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicEfCoreDemo", "BasicEfCoreDemo.csproj", "{5AD4A506-5821-4448-92D7-C7535877781C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{70773CF9-E6CC-4BAD-8DA3-F84AFF5443BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70773CF9-E6CC-4BAD-8DA3-F84AFF5443BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70773CF9-E6CC-4BAD-8DA3-F84AFF5443BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70773CF9-E6CC-4BAD-8DA3-F84AFF5443BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AD4A506-5821-4448-92D7-C7535877781C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD4A506-5821-4448-92D7-C7535877781C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD4A506-5821-4448-92D7-C7535877781C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD4A506-5821-4448-92D7-C7535877781C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

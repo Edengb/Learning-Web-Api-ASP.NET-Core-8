@@ -26,10 +26,13 @@ namespace BasicEfCoreDemo.Controllers
         public async Task<ActionResult<IEnumerable<Invoice>>> GetInvoices(int page = 1, int pageSize = 10, InvoiceStatus? status = null)
         {
              return await _context.Invoices.AsQueryable()
+                            .Include(x => x.InvoiceItems)
                             .Where(x => status == null || x.Status == status)
                             .OrderByDescending(x => x.InvoiceDate)
                             .Skip((page - 1) * pageSize)
                             .Take(pageSize)
+                            //.AsSplitQuery()
+                            //.AsSingleQuery()
                             .ToListAsync();
         }
 
@@ -37,7 +40,7 @@ namespace BasicEfCoreDemo.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Invoice>> GetInvoice(Guid id)
         {
-            var invoice = await _context.Invoices.FindAsync(id);
+            var invoice = await _context.Invoices.Include(x => x.InvoiceItems).SingleOrDefaultAsync(x => x.Id == id);
 
             if (invoice == null)
             {
