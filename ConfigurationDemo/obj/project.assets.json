@@ -428,27 +428,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\eestevam\\.nuget\\packages\\": {}
+    "C:\\Users\\Altnet\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\eestevam\\repo\\ConfigurationDemo\\ConfigurationDemo.csproj",
+      "projectUniqueName": "C:\\repo_personal\\Learning-Web-Api-ASP.NET-Core-8\\ConfigurationDemo\\ConfigurationDemo.csproj",
       "projectName": "ConfigurationDemo",
-      "projectPath": "C:\\Users\\eestevam\\repo\\ConfigurationDemo\\ConfigurationDemo.csproj",
-      "packagesPath": "C:\\Users\\eestevam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\eestevam\\repo\\ConfigurationDemo\\obj\\",
+      "projectPath": "C:\\repo_personal\\Learning-Web-Api-ASP.NET-Core-8\\ConfigurationDemo\\ConfigurationDemo.csproj",
+      "packagesPath": "C:\\Users\\Altnet\\.nuget\\packages\\",
+      "outputPath": "C:\\repo_personal\\Learning-Web-Api-ASP.NET-Core-8\\ConfigurationDemo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\eestevam\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Altnet\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

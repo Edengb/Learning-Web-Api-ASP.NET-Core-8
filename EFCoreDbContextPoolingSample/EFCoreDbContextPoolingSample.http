@@ -1,0 +1,6 @@
+@EFCoreDbContextPoolingSample_HostAddress = http://localhost:5194
+
+GET {{EFCoreDbContextPoolingSample_HostAddress}}/api/cats
+Accept: application/json
+
+###

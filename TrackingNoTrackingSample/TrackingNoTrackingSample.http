@@ -1,0 +1,42 @@
+@TrackingNoTrackingSample_HostAddress = http://localhost:5113
+
+GET {{TrackingNoTrackingSample_HostAddress}}/api/cats/tests/tracking/first-find-single
+###
+GET {{TrackingNoTrackingSample_HostAddress}}/api/cats/tests/no-tracking/first-find-single
+
+###
+GET {{TrackingNoTrackingSample_HostAddress}}/api/cats/tracking-demo/outdated-cat
+Accept: application/json
+
+###
+GET {{TrackingNoTrackingSample_HostAddress}}/api/cats/no-tracking-demo/updated-cat
+Accept: application/json
+
+###
+GET {{TrackingNoTrackingSample_HostAddress}}/api/cats/tracking-demo/outdated-new-cat
+
+###
+GET {{TrackingNoTrackingSample_HostAddress}}/api/cats/states-demo/attached-cat
+Accept: application/json
+
+###
+GET {{TrackingNoTrackingSample_HostAddress}}/api/cats/states-demo/detached-cat
+Accept: application/json
+
+###
+POST {{TrackingNoTrackingSample_HostAddress}}/api/cats/states-demo/added-cat
+Accept: application/json
+
+###
+DELETE {{TrackingNoTrackingSample_HostAddress}}/api/cats/states-demo/last
+Accept: application/json
+
+###
+PUT {{TrackingNoTrackingSample_HostAddress}}/api/cats/33427e77-4ccc-4907-a81c-1522a4dffa28
+Content-Type: application/json
+
+{
+    "nickname": "Chorão",
+    "age": 21,
+    "breed": 4
+}
