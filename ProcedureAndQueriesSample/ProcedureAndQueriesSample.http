@@ -1,0 +1,7 @@
+@ProcedureAndQueriesSample_HostAddress = http://localhost:5126
+
+GET {{ProcedureAndQueriesSample_HostAddress}}/api/cats/procedure-sample-1
+Accept: application/json
+
+###
+GET {{ProcedureAndQueriesSample_HostAddress}}/api/breeds

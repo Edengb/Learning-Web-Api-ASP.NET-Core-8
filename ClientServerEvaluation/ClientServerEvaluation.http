@@ -1,0 +1,13 @@
+@ClientServerEvaluation_HostAddress = http://localhost:5038
+
+GET {{ClientServerEvaluation_HostAddress}}/api/iqueryble-server-evaluation
+###
+GET {{ClientServerEvaluation_HostAddress}}/api/ienumerable-client-evaluation
+
+###
+GET {{ClientServerEvaluation_HostAddress}}/api/potentially-memory-leak/non-thread-safety/sample
+Accept: application/json
+
+###
+GET {{ClientServerEvaluation_HostAddress}}/api/avoid-memory-leak/thread-safety/sample
+Accept: application/json 
